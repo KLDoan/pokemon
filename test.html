@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background-color: orangered;
+            color: white;
+            margin: 0;
+            font-family: rubik;
+        }
+
+        .container {
+            padding: 40px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 54px;
+        }
+
+        #pokedex {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 20px;
+            padding-inline-start: 0;
+        }
+
+        .card {
+            width: 80%;
+            margin: 10px;
+            list-style: none;
+            padding: 40px;
+            background-color: #f4f4f4;
+            color: #222;
+            text-align: center;
+        }
+
+        .card:hover {
+            animation: animate 0.5s linear;
+        }
+
+        .card-title {
+            text-transform: capitalize;
+            margin-bottom: 0px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .card-subtitle {
+            margin-top: 5px;
+            margin-right: 10px;
+            color: #666;
+            font-weight: lighter;
+        }
+
+        .card-image {
+            height: 180px;
+        }
+
+        @keyframes animate {
+            20% {
+                transform: translateY(-6px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .buttonMove {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .buttonPage {
+            width: 10%;
+            height: 30px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pokemon list</h1>
+        <ul id="pokedex"></ul>
+    </div>
+    <div class="buttonMove">
+        <button id="next_p" class="buttonPage">Next page</button>
+        <button id="pre_p" class="buttonPage">Previous page</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
